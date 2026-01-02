@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Flight | PrimeSky Airlines</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <img src="logo.png">
+        <h1>PrimeSky Airlines</h1>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="about.html">About Us</a>
+        <a href="profile.html">Profile</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+</header>
+
+<main class="booking-page">
+
+    <div class="booking-form">
+
+        <h2>Flight Booking</h2>
+        <p class="subtext">
+            Complete the form below to calculate your flight fare
+        </p>
+
+        <!-- SECTION 1: FLIGHT DETAILS -->
+        <div class="form-section">
+            <h3>Flight Details</h3>
+
+            <label>Route</label>
+            <select id="route">
+                <option value="2300">Cebu → Manila</option>
+                <option value="2350">Cebu → Davao</option>
+                <option value="3450">Manila → Hong Kong</option>
+            </select>
+
+            <label>Seat Class</label>
+            <select id="seat">
+                <option value="0">Economy Class</option>
+                <option value="1000">Business Class</option>
+            </select>
+        </div>
+
+        <!-- SECTION 2: PASSENGER DETAILS -->
+        <div class="form-section">
+            <h3>Passenger Information</h3>
+
+            <label>Passenger Type</label>
+            <select id="ptype">
+                <option value="regular">Regular</option>
+                <option value="student">Student (10% Discount)</option>
+                <option value="senior">Senior (10% Discount)</option>
+                <option value="pwd">PWD (10% Discount)</option>
+                <option value="child">Child below 5 (FREE)</option>
+            </select>
+
+            <label>Number of Passengers</label>
+            <input type="number" id="qty" min="1" value="1">
+        </div>
+
+        <!-- SECTION 3: PAYMENT SUMMARY -->
+        <div class="form-section">
+            <h3>Fare Summary</h3>
+            <button onclick="calculate()">Calculate Fare</button>
+
+            <div id="result" class="fare-result"></div>
+        </div>
+
+    </div>
+
+</main>
+
+
+
+</body>
+</html>
